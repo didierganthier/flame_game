@@ -1,6 +1,7 @@
 import 'package:flame/game.dart';
 import 'package:flame_game/astronaut_player.dart';
 import 'package:flame_game/astronaut_world.dart';
+import 'package:flame_game/helpers/directions.dart';
 import 'package:flutter/material.dart';
 
 class AstronautGame extends FlameGame {
@@ -22,5 +23,9 @@ class AstronautGame extends FlameGame {
         _astronautWorld.size.y,
       ),
     );
+  }
+
+  onArrowKeyChanged(Direction direction) {
+    _astronautPlayer.direction = direction;
   }
 }
